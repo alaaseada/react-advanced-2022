@@ -1,7 +1,19 @@
-import React from 'react';
+import React from "react";
 
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
+  let title = "Random title";
+  function handleClick() {
+    title = "Hello people";
+    console.log(title);
+  }
+  return (
+    <>
+      <h1> {title}</h1>
+      <button className="btn" type="button" onClick={handleClick}>
+        Change title
+      </button>
+    </>
+  );
 };
 
 export default ErrorExample;
